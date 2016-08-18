@@ -168,7 +168,7 @@
         <form action="index.php" method="post">
           <!-- nickname -->
           <div class="form-group">
-            <div class="input-group">
+            <div class="input-group" data-validate="length" data-length="4">
               <?php if ($id_edit != ''): ?>
                 <input type="hidden" name="action" value="edit">
                 <input type="hidden" name="id" value="<?php print $id_edit; ?>">
