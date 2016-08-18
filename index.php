@@ -18,11 +18,13 @@
         if ($_POST['action'] == 'input') {
           $sql = 'INSERT INTO `posts` SET `nickname`=?,
                                           `comment`=?,
-                                          `created`=NOW()';
+                                          `created`=NOW(),
+                                          `thumbsup`=0,
+                                          `thumbsdown`=0';
           $data = array($nickname,$comment);
           $stml = $dbh->prepare($sql);
           $stml->execute($data);
-        } 
+        }
         // 修正SQL処理
         if ($_POST['action'] == 'edit') {
           $sql = 'UPDATE `posts` SET `nickname`=?,
@@ -169,8 +171,8 @@
             <div class="input-group">
               <?php if ($id_edit != ''): ?>
                 <input type="hidden" name="action" value="edit">
-                <?php print '<input type="hidden" name="id" value="' . $id_edit . '">'; ?>
-                <?php print '<input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" value="' . $nickname_edit . '" required>'; ?>
+                <input type="hidden" name="id" value="<?php print $id_edit; ?>">
+                <input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" value="<?php print $nickname_edit; ?>" required>
               <?php else: ?>
                 <input type="hidden" name="action" value="input">
                 <input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" required>

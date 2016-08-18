@@ -40,7 +40,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `nickname`, `comment`, `created`, `thumbsup`, `thumbsdown`) VALUES
-(1, 'kneeprayer', 'HellowWorld', '2016-08-15 04:51:17', 0, 0);
+(1, 'kneeprayer', 'Hello, World!!', '2016-08-15 04:51:17', 0, 0);
 
 --
 -- Indexes for dumped tables
