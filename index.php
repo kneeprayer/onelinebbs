@@ -175,7 +175,7 @@
                 <input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" value="<?php print $nickname_edit; ?>" required>
               <?php else: ?>
                 <input type="hidden" name="action" value="input">
-                <input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" required>
+                <input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" required autofocus>
               <?php endif; ?>
               <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
             </div>
