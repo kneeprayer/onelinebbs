@@ -239,19 +239,19 @@
                 </h2>
                 <p>
                   <?php print $created; ?>
-                  <?php print '<a href="index.php?id='. $id . '&action=thumbsup">'; ?>
+                  <a href="index.php?id=<?php print $id; ?>&action=thumbsup">
                     <i class="fa fa-thumbs-o-up" aria-hidden="true">
                       <?php print ' ' . $thumbsup; ?>
                     </i>
                   </a>
-                  <?php print '<a href="index.php?id='. $id . '&action=thumbsdown">'; ?>
+                  <a href="index.php?id=<?php print $id; ?>&action=thumbsdown">
                     <i class="fa fa-thumbs-o-down" aria-hidden="true">
                       <?php print ' ' . $thumbsdown; ?>
                     </i>
                   </a>
                 </p>
                 <p>
-                  <?php print '<a href="index.php?id=' . $id . '&action=delete">'; ?>
+                    <a href="index.php?id=<?php print $id; ?>&action=delete" onclick="return confirm('削除しますか?');">
                     <i class="glyphicon glyphicon-trash"></i> 
                   </a>
                 </P>
